@@ -1,5 +1,5 @@
-Summary:	Wireless Network Assistant
-Summary(pl):	Asystent Sieci Bezprzewodowej
+Summary:	Wireless network assistant
+Summary(pl):	Asystent sieci bezprzewodowej
 Name:		wlassistant
 Version:	0.3.9
 Release:	1
@@ -16,10 +16,10 @@ BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Wireless Network Assistant.
+Wireless network assistant.
 
 %description -l pl
-Asystent Sieci Bezprzewodowej.
+Asystent sieci bezprzewodowej.
 
 %prep
 %setup -q
