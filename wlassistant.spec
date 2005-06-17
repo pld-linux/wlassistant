@@ -11,10 +11,10 @@ URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:	zlib-devel
 BuildRequires:	qt-devel
-Requires:	wireless-tools
+BuildRequires:	zlib-devel
 Requires:	dhcpcd
+Requires:	wireless-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +29,7 @@ Asystent sieci bezprzewodowej.
 %build
 %{__make} -f Makefile.cvs
 %configure \
-%ifarch amd64
+%if "%{_lib}" == "lib64"
         --enable-libsuffix=64
 %endif
 
@@ -49,7 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/applnk/Utilities/wlassistant.desktop
+# -> %{_desktopdir}
+#%{_datadir}/applnk/Utilities/wlassistant.desktop
 %{_datadir}/apps/wlassistant
 %{_datadir}/config.kcfg/waconfig.kcfg
 %{_datadir}/icons/*/*x*/apps/wlassistant.png
