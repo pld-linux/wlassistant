@@ -40,7 +40,10 @@ Asystent sieci bezprzewodowej.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT 
+
+mkdir $RPM_BUILD_ROOT%{_desktopdir}/
+mv $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities/wlassistant.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,8 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
-# -> %{_desktopdir}
-#%{_datadir}/applnk/Utilities/wlassistant.desktop
+%{_desktopdir}/wlassistant.desktop
 %{_datadir}/apps/wlassistant
 %{_datadir}/config.kcfg/waconfig.kcfg
 %{_datadir}/icons/*/*x*/apps/wlassistant.png
