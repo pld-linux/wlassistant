@@ -1,12 +1,12 @@
 Summary:	Wireless network assistant
 Summary(pl):	Asystent sieci bezprzewodowej
 Name:		wlassistant
-Version:	0.5.0
+Version:	0.5.3
 Release:	1
 License:	GPL v2
-Group:		X11/Applications	
+Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
-# Source0-md5:	0e35591ba3df10db215aadedcb92fff3
+# Source0-md5:	4f0242b46f4c5c9b2ff3297d2de8424f
 URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	libjpeg-devel
@@ -40,7 +40,7 @@ Asystent sieci bezprzewodowej.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT 
+	DESTDIR=$RPM_BUILD_ROOT
 
 mkdir $RPM_BUILD_ROOT%{_desktopdir}/
 mv $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities/wlassistant.desktop $RPM_BUILD_ROOT%{_desktopdir}
@@ -53,6 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/wlassistant.desktop
-%{_datadir}/apps/wlassistant
 %{_datadir}/config.kcfg/waconfig.kcfg
 %{_datadir}/icons/*/*x*/apps/wlassistant.png
