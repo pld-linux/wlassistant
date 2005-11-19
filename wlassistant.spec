@@ -19,10 +19,13 @@ Requires:	wireless-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A user friendly KDE frontend allowing you to scan for and connect to wireless networks using any adapter utilizing Wireless Extensions.
+A user friendly KDE frontend allowing you to scan for and connect to
+wireless networks using any adapter utilizing Wireless Extensions.
 
 %description -l pl
-Asystent sieci bezprzewodowej.
+Przyjazny dla u¿ytkownika interfejs KDE pozwalaj±cy wyszukiwaæ i
+³±czyæ siê z sieciami bezprzewodowymi przy u¿yciu dowolnego urz±dzenia
+obs³uguj±cego rozszerzenia Wireless.
 
 %prep
 %setup -q
@@ -43,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mkdir $RPM_BUILD_ROOT%{_desktopdir}/
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 mv $RPM_BUILD_ROOT%{_datadir}/applnk/Utilities/wlassistant.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name}
