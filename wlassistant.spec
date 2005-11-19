@@ -19,7 +19,7 @@ Requires:	wireless-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Wireless network assistant.
+A user friendly KDE frontend allowing you to scan for and connect to wireless networks using any adapter utilizing Wireless Extensions.
 
 %description -l pl
 Asystent sieci bezprzewodowej.
