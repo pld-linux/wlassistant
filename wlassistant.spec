@@ -8,6 +8,8 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	4836d595a27f34c24784cdf9c2a9d5a8
 URL:		http://wlassistant.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	libjpeg-devel
@@ -31,11 +33,13 @@ obs³uguj±cego rozszerzenia Wireless.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* admin
 %{__make} -f Makefile.cvs
 %configure \
 %if "%{_lib}" == "lib64"
-        --enable-libsuffix=64
+        --enable-libsuffix=64 \
 %endif
+	--with-qt-libraries=%{_libdir}
 
 %{__make} \
 	CFLAGS="%{rpmcflags}"
