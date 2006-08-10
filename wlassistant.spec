@@ -14,7 +14,6 @@ BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:  ltsp_x_core
 BuildRequires:	qt-devel
 BuildRequires:	zlib-devel
 Requires:	dhcpcd
