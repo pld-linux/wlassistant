@@ -1,12 +1,12 @@
 Summary:	Wireless network assistant
 Summary(pl):	Asystent sieci bezprzewodowej
 Name:		wlassistant
-Version:	0.5.5
+Version:	0.5.6
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
-# Source0-md5:	1f30f1384b03662a9a0b75fa777f21d6
+# Source0-md5:	06b767d637e9a2374b07e9e079e2d40d
 URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
