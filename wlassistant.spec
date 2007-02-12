@@ -1,5 +1,5 @@
 Summary:	Wireless network assistant
-Summary(pl.UTF-8):   Asystent sieci bezprzewodowej
+Summary(pl.UTF-8):	Asystent sieci bezprzewodowej
 Name:		wlassistant
 Version:	0.5.6
 Release:	1
