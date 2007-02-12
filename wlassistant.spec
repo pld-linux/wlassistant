@@ -1,5 +1,5 @@
 Summary:	Wireless network assistant
-Summary(pl):	Asystent sieci bezprzewodowej
+Summary(pl.UTF-8):   Asystent sieci bezprzewodowej
 Name:		wlassistant
 Version:	0.5.6
 Release:	1
@@ -24,10 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A user friendly KDE frontend allowing you to scan for and connect to
 wireless networks using any adapter utilizing Wireless Extensions.
 
-%description -l pl
-Przyjazny dla u¿ytkownika interfejs KDE pozwalaj±cy wyszukiwaæ i
-³±czyæ siê z sieciami bezprzewodowymi przy u¿yciu dowolnego urz±dzenia
-obs³uguj±cego rozszerzenia Wireless.
+%description -l pl.UTF-8
+Przyjazny dla uÅ¼ytkownika interfejs KDE pozwalajÄ…cy wyszukiwaÄ‡ i
+Å‚Ä…czyÄ‡ siÄ™ z sieciami bezprzewodowymi przy uÅ¼yciu dowolnego urzÄ…dzenia
+obsÅ‚ugujÄ…cego rozszerzenia Wireless.
 
 %prep
 %setup -q
