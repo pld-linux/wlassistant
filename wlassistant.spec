@@ -39,6 +39,7 @@ obsługującego rozszerzenia Wireless.
 %endif
 	prefix=%{_prefix} \
         datadir=%{_datadir} \
+	qtdir=%{_libdir}/qt \
         qtincludes=%{_includedir}/qt
 
 %{__make} \
