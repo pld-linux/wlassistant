@@ -35,12 +35,12 @@ obsługującego rozszerzenia Wireless.
 %build
 ./configure \
 %if "%{_lib}" == "lib64"
-        libsuffix=64 \
+	libsuffix=64 \
 %endif
 	prefix=%{_prefix} \
-        datadir=%{_datadir} \
+	datadir=%{_datadir} \
 	qtdir=%{_libdir}/qt \
-        qtincludes=%{_includedir}/qt
+	qtincludes=%{_includedir}/qt
 
 %{__make} \
 	CFLAGS="%{rpmcflags}"
