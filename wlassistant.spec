@@ -7,10 +7,12 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	06b767d637e9a2374b07e9e079e2d40d
+Patch0:		%{name}-fixkdeconfig.patch
 URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.337
 BuildRequires:	scons
 BuildRequires:	zlib-devel
 Requires:	dhcpcd
@@ -28,25 +30,28 @@ obsługującego rozszerzenia Wireless.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-export PYTHON=/usr/bin/python
-export SCONS=/usr/bin/scons
-./configure \
+%{__scons} configure \
 %if "%{_lib}" == "lib64"
 	libsuffix=64 \
 %endif
 	prefix=%{_prefix} \
 	datadir=%{_datadir} \
-	qtdir=%{_libdir}/qt \
+	qtdir=%{_prefix} \
+	kdedir=%{_prefix} \
+	kdelibs=%{_libdir} \
+	qtlibs=%{_libdir}/qt \
+	kdeincludes=%{_includedir} \
+	execprefix=%{_bindir} \
 	qtincludes=%{_includedir}/qt
-
-%{__make}
+%{__scons} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__scons} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_desktopdir}
