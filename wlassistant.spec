@@ -10,6 +10,8 @@ Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
+BuildRequires:	python
+BuildRequires:	scons
 BuildRequires:	zlib-devel
 Requires:	dhcpcd
 Requires:	wireless-tools
@@ -28,17 +30,15 @@ obsługującego rozszerzenia Wireless.
 %setup -q
 
 %build
-./configure \
+%configure \
 %if "%{_lib}" == "lib64"
 	libsuffix=64 \
 %endif
 	prefix=%{_prefix} \
 	datadir=%{_datadir} \
-	qtdir=%{_libdir}/qt \
 	qtincludes=%{_includedir}/qt
 
-%{__make} \
-	CFLAGS="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
