@@ -30,12 +30,15 @@ obsługującego rozszerzenia Wireless.
 %setup -q
 
 %build
-%configure \
+export PYTHON=/usr/bin/python
+export SCONS=/usr/bin/scons
+./configure \
 %if "%{_lib}" == "lib64"
 	libsuffix=64 \
 %endif
 	prefix=%{_prefix} \
 	datadir=%{_datadir} \
+	qtdir=%{_libdir}/qt \
 	qtincludes=%{_includedir}/qt
 
 %{__make}
