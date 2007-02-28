@@ -8,13 +8,8 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	06b767d637e9a2374b07e9e079e2d40d
 URL:		http://wlassistant.sourceforge.net/
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
-BuildRequires:	qt-devel
 BuildRequires:	zlib-devel
 Requires:	dhcpcd
 Requires:	wireless-tools
