@@ -2,7 +2,7 @@ Summary:	Wireless network assistant
 Summary(pl.UTF-8):	Asystent sieci bezprzewodowej
 Name:		wlassistant
 Version:	0.5.7
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
@@ -44,7 +44,6 @@ obsługującego rozszerzenia Wireless.
 	kdelibs=%{_libdir} \
 	qtlibs=%{_libdir}/qt \
 	kdeincludes=%{_includedir} \
-	execprefix=%{_bindir} \
 	qtincludes=%{_includedir}/qt
 %{__scons} .
 
