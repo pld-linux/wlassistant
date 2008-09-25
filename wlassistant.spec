@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	4623b498ac42839d08c631c500f18f8b
 Patch0:		%{name}-fixkdeconfig.patch
 URL:		http://wlassistant.sourceforge.net/
+Buildrequires:	gettext-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	python
@@ -25,8 +26,8 @@ wireless networks using any adapter utilizing Wireless Extensions.
 
 %description -l pl.UTF-8
 Przyjazny dla użytkownika interfejs KDE pozwalający wyszukiwać i
-łączyć się z sieciami bezprzewodowymi przy użyciu dowolnego urządzenia
-obsługującego rozszerzenia Wireless.
+łączyć się z sieciami bezprzewodowymi przy użyciu dowolnego
+urządzenia obsługującego rozszerzenia Wireless.
 
 %prep
 %setup -q
