@@ -26,8 +26,8 @@ wireless networks using any adapter utilizing Wireless Extensions.
 
 %description -l pl.UTF-8
 Przyjazny dla użytkownika interfejs KDE pozwalający wyszukiwać i
-łączyć się z sieciami bezprzewodowymi przy użyciu dowolnego
-urządzenia obsługującego rozszerzenia Wireless.
+łączyć się z sieciami bezprzewodowymi przy użyciu dowolnego urządzenia
+obsługującego rozszerzenia Wireless.
 
 %prep
 %setup -q
