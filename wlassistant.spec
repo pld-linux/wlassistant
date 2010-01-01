@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	4623b498ac42839d08c631c500f18f8b
 Patch0:		%{name}-fixkdeconfig.patch
 URL:		http://wlassistant.sourceforge.net/
-Buildrequires:	gettext-devel
+BuildRequires:	gettext-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	python
