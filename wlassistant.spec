@@ -2,13 +2,15 @@ Summary:	Wireless network assistant
 Summary(pl.UTF-8):	Asystent sieci bezprzewodowej
 Name:		wlassistant
 Version:	0.5.7
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/wlassistant/%{name}-%{version}.tar.bz2
 # Source0-md5:	4623b498ac42839d08c631c500f18f8b
 Patch0:		%{name}-fixkdeconfig.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://wlassistant.sourceforge.net/
+BuildRequires:	dos2unix
 BuildRequires:	gettext-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
@@ -32,6 +34,8 @@ obsługującego rozszerzenia Wireless.
 %prep
 %setup -q
 %patch0 -p0
+dos2unix src/wlassistant.desktop
+%patch1 -p1
 
 %build
 %{__scons} configure \

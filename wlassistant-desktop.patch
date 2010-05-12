@@ -1,0 +1,8 @@
+--- wlassistant-0.5.7/src/wlassistant.desktop~	2007-04-03 20:45:58.000000000 +0200
++++ wlassistant-0.5.7/src/wlassistant.desktop	2010-05-12 16:12:55.234144422 +0200
+@@ -6,4 +6,4 @@
+ Exec=ksystraycmd sudo wlassistant
+ Icon=wlassistant
+ Type=Application
+-Categories=Qt;KDE;Network;
++Categories=Qt;KDE;Network;System;
