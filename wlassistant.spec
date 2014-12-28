@@ -11,7 +11,7 @@ Patch0:		%{name}-fixkdeconfig.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://wlassistant.sourceforge.net/
 BuildRequires:	dos2unix
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kdelibs-devel
 BuildRequires:	libiw-devel
 BuildRequires:	python
